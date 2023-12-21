@@ -11,8 +11,10 @@
     "license": "MIT",
     "require": {
         "php": "^8.0.0",
+        "automattic/woocommerce": "^3.1",
         "beyondcode/laravel-websockets": "^1.11",
         "brick/math": "^0.11.0",
+        "coconutcraig/laravel-postmark": "^3.1",
         "dekor/php-array-table": "^2.0",
         "doctrine/dbal": "^3.0",
         "fakerphp/faker": "^1.12",
@@ -25,6 +27,7 @@
         "laravel/telescope": "^4.0",
         "laravel/tinker": "^2.0",
         "laravie/parser": "^2.1",
+        "matthewbdaly/laravel-azure-storage": "^2.0",
         "nikic/php-parser": "^4.14",
         "phpoffice/phpspreadsheet": "^1.17",
         "picqer/php-barcode-generator": "^2.1",

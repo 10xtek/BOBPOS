@@ -1,7 +1,7 @@
 <?php
 
 /**
- * NexoPOS Controller
+ * BOBPOS Controller
  *
  * @since  1.0
  **/
@@ -17,7 +17,7 @@ class SetupController extends Controller
     public function welcome()
     {
         return view( 'pages.setup.welcome', [
-            'title' => __( 'NexoPOS 4 &mdash; Setup Wizard' ),
+            'title' => __( 'BOBPOS 4 &mdash; Setup Wizard' ),
         ]);
     }
 

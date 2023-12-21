@@ -82,7 +82,7 @@ class MakeModuleServiceProviderCommand extends Command
                 }
             }
         } else {
-            $this->info( 'NexoPOS is not yet installed.' );
+            $this->info( 'BOBPOS is not yet installed.' );
         }
     }
 }

@@ -14,13 +14,13 @@ class NsLanguage {
         const promises  =   [];
 
         /**
-         * the language for NexoPOS is
+         * the language for BOBPOS is
          * fetched in priority
          */
-        promises.push( this.fetchLang( 'NexoPOS', ns.langFiles ) );
+        promises.push( this.fetchLang( 'BOBPOS', ns.langFiles ) );
         
         for( let namespace in ns.langFiles ) {
-            if ( namespace !== 'NexoPOS' ) {
+            if ( namespace !== 'BOBPOS' ) {
                 promises.push( this.fetchLang( namespace, ns.langFiles ) );
             }
         }

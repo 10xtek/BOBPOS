@@ -20,3 +20,4 @@ $theme  =   ns()->option->get( 'ns_default_theme', 'light' );
     @yield( 'layout.default.body' )
 </body>
 </html>
+
