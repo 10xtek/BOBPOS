@@ -2,6 +2,7 @@
 
 namespace App\Console;
 
+use Log;
 use App\Jobs\ClearHoldOrdersJob;
 use App\Jobs\DetectLowStockProductsJob;
 use App\Jobs\ExecuteRecurringExpensesJob;

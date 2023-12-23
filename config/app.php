@@ -165,6 +165,7 @@ return [
         /*
          * Package Service Providers...
          */
+		Barryvdh\Debugbar\ServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -233,6 +234,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Hook' => App\Classes\Hook::class,
 
+		'Debugbar' => Barryvdh\Debugbar\Facades\Debugbar::class,
     ],
 
 ];

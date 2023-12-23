@@ -50,7 +50,7 @@ return [
     'channels' => [
         'stack' => [
             'driver' => 'stack',
-            'channels' => ['single', 'daily'],
+            'channels' => ['single', 'daily', 'larabug'],
             'ignore_exceptions' => false,
         ],
 
@@ -66,6 +66,10 @@ return [
             'level' => env('LOG_LEVEL', 'debug'),
             'days' => 14,
         ],
+
+		'larabug' => [
+			'driver' => 'larabug',
+		],
 
         'slack' => [
             'driver' => 'slack',
