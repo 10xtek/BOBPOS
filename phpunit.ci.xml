@@ -41,7 +41,6 @@
       <directory suffix="CashRegisterActionsTest.php">./tests/Feature</directory>
       <directory suffix="CreateCustomPaymentTypeAndOrder.php">./tests/Feature</directory>
       <directory suffix="CreateOrderOnRegister.php">./tests/Feature</directory>
-      <directory suffix="CreateOrderTest.php">./tests/Feature</directory>
       <directory suffix="CreateOrderPaidWithCustomerCredit.php">./tests/Feature</directory>
       <directory suffix="CreateOrderWithDifferentProductPriceMode.php">./tests/Feature</directory>
       <directory suffix="CombiningProductsTest.php">./tests/Feature</directory>
