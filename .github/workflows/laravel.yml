@@ -51,4 +51,4 @@ jobs:
         DB_DATABASE: nexopos_v4
         DB_USERNAME: root
         DB_PASSWORD: coolwhip
-		DB_PORT: ${{ job.services.mysql.ports['3306'] }}
+        DB_PORT: ${{ job.services.mysql.ports['3306'] }}
