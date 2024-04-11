@@ -37,7 +37,7 @@ jobs:
     - name: Start mysql service
       run: |
         sudo /etc/init.d/mysql start
-        mysql -e 'CREATE DATABASE ${{ env.DB_DATABASE }};' --user=${{ env.DB_USER }} --password=${{ env.DB_PASSWORD }}
+        mysql -e 'CREATE DATABASE ${{ env.DB_DATABASE }};' --user=${{ env.DB_USERNAME }} --password=${{ env.DB_PASSWORD }}
     - name: Create Database File
       run: touch tests/database.sqlite
     - name: Directory Permissions
