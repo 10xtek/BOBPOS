@@ -14,7 +14,7 @@ jobs:
       mysql:
           image: mysql:5.7
           env:
-              MYSQL_ALLOW_EMPTY_PASSWORD: yes
+              MYSQL_ROOT_PASSWORD: 'coolwhip'
               MYSQL_DATABASE: nexopos_v4
           ports:
               - 3306
@@ -39,5 +39,7 @@ jobs:
       run: vendor/bin/phpunit --config phpunit.ci.xml
       env:
         DB_CONNECTION: mysql
+        DB_HOST: 127.0.0.1
         DB_DATABASE: nexopos_v4
         DB_USERNAME: root
+        DB_PASSWORD: coolwhip
