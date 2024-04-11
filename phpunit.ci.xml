@@ -12,6 +12,7 @@
     <testsuite name="Feature">
       <directory suffix="CreateTestDatabaseSQLite.php">./tests/Feature</directory>
       <directory suffix="TestLanguageFileValidity.php">./tests/Feature</directory>
+      <directory suffix="HardResetTest.php">./tests/Feature</directory>
       <directory suffix="ExceptionsTest.php">./tests/Feature</directory>
       <directory suffix="TestAllDateTimeOptions.php">./tests/Feature</directory>
       <directory suffix="CrudTest.php">./tests/Feature</directory>
@@ -21,8 +22,7 @@
       <directory suffix="TestSetOrderType.php">./tests/Feature</directory>
       <directory suffix="OptionSavingTest.php">./tests/Feature</directory>
       <directory suffix="TestOtherGetRoutes.php">./tests/Feature</directory>
-      <directory suffix="ManageRoleTest.php">./tests/Feature<
-		/directory>
+      <directory suffix="ManageRoleTest.php">./tests/Feature</directory>
       <directory suffix="CreateTaxGroupTest.php">./tests/Feature</directory>
       <directory suffix="CreateTaxTest.php">./tests/Feature</directory>
       <directory suffix="CreateCouponTest.php">./tests/Feature</directory>
@@ -75,9 +75,9 @@
     <server name="CACHE_DRIVER" value="array"/>
     <server name="DB_CONNECTION" value="mysql"/>
     <server name="DB_DATABASE" value="laravel"/>
-    <server name="DB_HOST" value="127.0.0.1"/>
+    <server name="DB_HOST" value="mysql"/>
     <server name="DB_USERNAME" value="root"/>
-    <server name="DB_PASSWORD" value="root"/>
+    <server name="DB_PASSWORD" value=""/>
     <server name="DB_PREFIX" value=""/>
     <server name="MAIL_MAILER" value="array"/>
     <server name="QUEUE_CONNECTION" value="sync"/>
