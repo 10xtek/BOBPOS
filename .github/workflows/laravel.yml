@@ -43,10 +43,7 @@ jobs:
       run: mysql --user=laravel --host=127.0.0.1
       continue-on-error: true
     - name: Run MySQL Test
-      run: mysql --user=laravel --password=password --host=mysql
-      continue-on-error: true
-    - name: Run MySQL Test
-      run: mysql --user=laravel --password=password --host=127.0.0.1
+      run: mysql --user=laravel --host=127.0.0.1
       continue-on-error: true
     - name: Run Migrations
       run: php artisan migrate --path=./database/migrations/core,./database/migrations/create --seed
@@ -57,5 +54,5 @@ jobs:
         DB_HOST: mysql
         DB_DATABASE: laravel
         DB_USERNAME: laravel
-        DB_PASSWORD: password
+        DB_PASSWORD: 
         DB_PORT: ${{ job.services.mysql.ports['3306'] }}
