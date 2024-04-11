@@ -39,7 +39,9 @@ jobs:
           php artisan migrate --path=./database/migrations/core
           php artisan migrate --path=./database/migrations/create
           php artisan ns:setup --store_name=BOBPOS --admin_username=nimda --admin_email=miyuru@10xtek.com --admin_password=TxAnGs481vNd48wX61JdlrcJiA47NR7
+          php artisan migrate --path=./database/migrations/update
           mysql -e 'USE laravel; SHOW TABLES;' -uroot -proot
+          php aritsan storage:link
           vendor/bin/phpunit --config phpunit.ci.xml
       env:
         DB_CONNECTION: mysql
