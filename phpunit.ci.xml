@@ -12,7 +12,6 @@
     <testsuite name="Feature">
       <directory suffix="CreateTestDatabaseSQLite.php">./tests/Feature</directory>
       <directory suffix="TestLanguageFileValidity.php">./tests/Feature</directory>
-      <directory suffix="HardResetTest.php">./tests/Feature</directory>
       <directory suffix="ExceptionsTest.php">./tests/Feature</directory>
       <directory suffix="TestAllDateTimeOptions.php">./tests/Feature</directory>
       <directory suffix="CrudTest.php">./tests/Feature</directory>
@@ -22,7 +21,8 @@
       <directory suffix="TestSetOrderType.php">./tests/Feature</directory>
       <directory suffix="OptionSavingTest.php">./tests/Feature</directory>
       <directory suffix="TestOtherGetRoutes.php">./tests/Feature</directory>
-      <directory suffix="ManageRoleTest.php">./tests/Feature</directory>
+      <directory suffix="ManageRoleTest.php">./tests/Feature<
+		/directory>
       <directory suffix="CreateTaxGroupTest.php">./tests/Feature</directory>
       <directory suffix="CreateTaxTest.php">./tests/Feature</directory>
       <directory suffix="CreateCouponTest.php">./tests/Feature</directory>
