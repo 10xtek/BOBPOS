@@ -35,7 +35,7 @@ class SyncOrders extends TestCase
         ]);
         
         // Mock the user
-        $user = User::factory()->create(['is_retail_user' => 1]);
+        $user = App\Models\User;=::factory()->create(['is_retail_user' => 1]);
 
         // Mock the order controller instance
         $orderController = new OrderController();
