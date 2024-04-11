@@ -40,7 +40,7 @@ jobs:
     - name: Create a delay for mysql to start
       run: sleep 30
     - name: Run MySQL test 2
-      run: mysql --user=laravel --host=127.0.0.1
+      run: mysql --user=root --host=127.0.0.1
       continue-on-error: true
     - name: Run MySQL Test
       run: mysql --user=laravel --host=127.0.0.1
