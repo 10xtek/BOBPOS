@@ -40,8 +40,7 @@ jobs:
           php artisan migrate --path=./database/migrations/create
           php artisan ns:setup --store_name=BOBPOS --admin_username=nimda --admin_email=miyuru@10xtek.com --admin_password=TxAnGs481vNd48wX61JdlrcJiA47NR7
           mysql -e 'USE laravel; SHOW TABLES;' -uroot -proot
-    - name: Execute tests (Unit and Feature tests) via PHPUnit
-      run: vendor/bin/phpunit --config phpunit.ci.xml
+          vendor/bin/phpunit --config phpunit.ci.xml
       env:
         DB_CONNECTION: mysql
         DB_HOST: mysql
