@@ -40,6 +40,8 @@ jobs:
         sleep 10
         sudo /etc/init.d/mysql status	
         mysql -e 'CREATE DATABASE ${{ env.DB_DATABASE }};' --user=${{ env.DB_USERNAME }} --password=${{ env.DB_PASSWORD }}
+        continue-on-error: true
+        mysql -e 'CREATE DATABASE laravel_test;' --user=root
     - name: Create Database File
       run: touch tests/database.sqlite
     - name: Directory Permissions
