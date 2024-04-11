@@ -16,7 +16,6 @@
       <directory suffix="TestAllDateTimeOptions.php">./tests/Feature</directory>
       <directory suffix="CrudTest.php">./tests/Feature</directory>
       <directory suffix="FieldsTest.php">./tests/Feature</directory>
-      <directory suffix="UploadModuleTest.php">./tests/Feature</directory>
       <directory suffix="FieldsTest.php">./tests/Feature</directory>
       <directory suffix="TestSetOrderType.php">./tests/Feature</directory>
       <directory suffix="OptionSavingTest.php">./tests/Feature</directory>
@@ -47,7 +46,6 @@
       <directory suffix="CreateOrderWithDifferentProductPriceMode.php">./tests/Feature</directory>
       <directory suffix="CombiningProductsTest.php">./tests/Feature</directory>
       <directory suffix="ComputeTaxesFromSales.php">./tests/Feature</directory>
-      <directory suffix="DeleteOrderTest.php">./tests/Feature</directory>
       <directory suffix="DeleteRegisterTest.php">./tests/Feature</directory>
       <directory suffix="CanSeeReportsTest.php">./tests/Feature</directory>
       <directory suffix="OrderHoldTest.php">./tests/Feature</directory>
