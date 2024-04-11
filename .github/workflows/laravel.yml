@@ -19,7 +19,10 @@ jobs:
           ports:
               - 3306
           options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
-
+    env:
+      DB_DATABASE: laravel
+      DB_USERNAME: laravel
+      DB_PASSWORD: password
     steps:  
     - uses: shivammathur/setup-php@b7d1d9c9a92d8d8463ce36d7f60da34d461724f8
       with:
@@ -32,7 +35,9 @@ jobs:
     - name: Generate key
       run: php artisan key:generate
     - name: Start mysql service
-      run: sudo /etc/init.d/mysql start
+      run: |
+        sudo /etc/init.d/mysql start
+        mysql -e 'CREATE DATABASE ${{ env.DB_DATABASE }};' -u${{ env.DB_USER }} -p${{ env.DB_PASSWORD }}
     - name: Create Database File
       run: touch tests/database.sqlite
     - name: Directory Permissions
