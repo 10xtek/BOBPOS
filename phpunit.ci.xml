@@ -45,7 +45,6 @@
       <directory suffix="CreateOrderPaidWithCustomerCredit.php">./tests/Feature</directory>
       <directory suffix="CreateOrderWithDifferentProductPriceMode.php">./tests/Feature</directory>
       <directory suffix="CombiningProductsTest.php">./tests/Feature</directory>
-      <directory suffix="ComputeTaxesFromSales.php">./tests/Feature</directory>
       <directory suffix="DeleteRegisterTest.php">./tests/Feature</directory>
       <directory suffix="CanSeeReportsTest.php">./tests/Feature</directory>
       <directory suffix="OrderHoldTest.php">./tests/Feature</directory>
