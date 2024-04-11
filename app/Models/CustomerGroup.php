@@ -9,6 +9,9 @@ class CustomerGroup extends NsModel
 {
     use HasFactory;
 
+	// all fill all
+	protected $guarded = [];
+
     protected $table = 'nexopos_' . 'customers_groups';
 
     /**

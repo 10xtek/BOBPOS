@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class CustomerShippingAddress extends CustomerAddress
 {
     use HasFactory;
+	protected $guarded = [];
 
     protected static function booted()
     {

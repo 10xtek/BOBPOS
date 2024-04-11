@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::table('nexopos_orders', function (Blueprint $table) {
             //
+			$table->integer( 'woocommerce_order_id' )->default(0)->nullable();
         });
     }
 
@@ -27,6 +28,7 @@ return new class extends Migration
     {
         Schema::table('nexopos_orders', function (Blueprint $table) {
             //
+			$table->dropColumn( 'woocommerce_order_id' );
         });
     }
 };

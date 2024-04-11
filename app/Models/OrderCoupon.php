@@ -9,6 +9,7 @@ class OrderCoupon extends NsModel
     use HasFactory;
 
     protected $table = 'nexopos_' . 'orders_coupons';
+	protected $guarded = [];
 
     public function customerCoupon()
     {

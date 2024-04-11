@@ -10,6 +10,7 @@ class OrderBillingAddress extends NsModel
     use HasFactory;
 
     protected $table = 'nexopos_' . 'orders_addresses';
+	protected $guarded = [];
 
     protected static function booted()
     {

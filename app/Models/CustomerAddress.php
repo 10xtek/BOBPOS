@@ -10,6 +10,7 @@ class CustomerAddress extends NsModel
     use HasFactory;
 
     protected $table = 'nexopos_' . 'customers_addresses';
+	protected $guarded = [];
 
     /**
      * define the relationship

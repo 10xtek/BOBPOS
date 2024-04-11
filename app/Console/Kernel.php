@@ -33,6 +33,9 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
+		$schedule->command('backup:run')->everyThreeHours();
+		$schedule->command('pos:tidybackups')->lastDayOfMonth('23:59');
+
         /**
          * @todo ensures some jobs can also be executed on multistore.
          * This could be made through events that are dispatched within

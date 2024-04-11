@@ -34,6 +34,7 @@
         "picqer/php-barcode-generator": "^2.1",
         "predis/predis": "^2.0",
         "pusher/pusher-php-server": "^7.0",
+        "spatie/laravel-backup": "^8.2",
         "spatie/laravel-db-snapshots": "^2.2",
         "symfony/http-client": "^6.0",
         "symfony/mailgun-mailer": "^6.0",

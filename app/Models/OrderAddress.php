@@ -9,4 +9,5 @@ class OrderAddress extends NsModel
     use HasFactory;
 
     protected $table = 'nexopos_' . 'orders_addresses';
+	protected $guarded = [];
 }

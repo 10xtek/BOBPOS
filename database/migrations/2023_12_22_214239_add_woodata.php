@@ -28,6 +28,7 @@ return new class extends Migration
     {
         Schema::table('nexopos_products_categories', function (Blueprint $table) {
             //
+			$table->dropColumn( 'woocommerce_id' );
         });
     }
 };

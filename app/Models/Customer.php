@@ -27,6 +27,7 @@ class Customer extends NsModel
     use HasFactory;
 
     protected $table = 'nexopos_' . 'customers';
+	protected $guarded = [];
 
     protected $isDependencyFor = [
         Order::class => [

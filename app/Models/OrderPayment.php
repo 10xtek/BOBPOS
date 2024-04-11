@@ -18,6 +18,7 @@ class OrderPayment extends NsModel
     use HasFactory;
 
     protected $table = 'nexopos_' . 'orders_payments';
+	protected $guarded = [];
 
     const PAYMENT_CASH = 'cash-payment';
 

@@ -52,7 +52,7 @@
                         <div slot="cell" class="w-full h-full" slot-scope="{ data }">
                             <div @click="loadCategories( data )" :key="data.id" class="cell-item w-full h-full cursor-pointer border flex flex-col items-center justify-center overflow-hidden">
                                 <div class="h-full w-full flex items-center justify-center">
-                                    <img v-if="data.preview_url" :src="data.preview_url" class="object-cover h-full" :alt="data.name">
+                                    <img v-if="data.preview_url" :src="data.preview_url" class="object-contain w-full" :alt="data.name">
                                     <i class="las la-image text-6xl" v-if="! data.preview_url"></i>
                                 </div>
                                 <div class="h-0 w-full">
@@ -72,7 +72,7 @@
                         <div slot="cell" class="w-full h-full" slot-scope="{ data }">
                             <div @click="addToTheCart( data )" :key="data.id" class="cell-item w-full h-full cursor-pointer border flex flex-col items-center justify-center overflow-hidden">
                                 <div class="h-full w-full flex items-center justify-center overflow-hidden">
-                                    <img v-if="data.galleries && data.galleries.filter( i => i.featured === 1 ).length > 0" :src="data.galleries.filter( i => i.featured === 1 )[0].url" class="object-cover h-full" :alt="data.name">
+                                    <img v-if="data.galleries && data.galleries.filter( i => i.featured === 1 ).length > 0" :src="data.galleries.filter( i => i.featured === 1 )[0].url" class="object-contain w-full" :alt="data.name">
                                     <i v-if="! data.galleries || data.galleries.filter( i => i.featured === 1 ).length === 0" class="las la-image text-6xl"></i>
                                 </div>
                                 <div class="h-0 w-full">

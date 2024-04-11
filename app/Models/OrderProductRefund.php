@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class OrderProductRefund extends NsModel
 {
     use HasFactory;
+	protected $guarded = [];
 
     const CONDITION_DAMAGED = 'damaged';
 

@@ -59,12 +59,17 @@ class Order extends NsModel
     use HasFactory;
 
     public $timestamps = false;
+	protected $guarded = [];
 
     protected $table = 'nexopos_' . 'orders';
 
     const TYPE_DELIVERY = 'delivery';
 
     const TYPE_TAKEAWAY = 'takeaway';
+
+    const TYPE_PICKUP = 'website_pickup';
+
+    const TYPE_SHIPPING = 'website_shipping';
 
     const PAYMENT_PAID = 'paid';
 
@@ -91,6 +96,8 @@ class Order extends NsModel
     const PROCESSING_READY = 'ready';
 
     const PROCESSING_FAILED = 'failed';
+
+    const PROCESSING_CANCELED = 'cancelled';
 
     const DELIVERY_PENDING = 'pending';
 

@@ -2366,13 +2366,25 @@ class OrdersService
         return Hook::filter( 'ns-orders-types', [
             'takeaway' => [
                 'identifier' => 'takeaway',
-                'label' => __( 'Take Away' ),
+                'label' => __( 'In Store Pickup' ),
                 'icon' => '/images/groceries.png',
                 'selected' => false,
             ],
             'delivery' => [
                 'identifier' => 'delivery',
-                'label' => __( 'Delivery' ),
+                'label' => __( 'Shipping' ),
+                'icon' => '/images/delivery.png',
+                'selected' => false,
+            ],
+            'website_pickup' => [
+                'identifier' => 'website_pickup',
+                'label' => __( 'Website In Store Pickup' ),
+                'icon' => '/images/delivery.png',
+                'selected' => false,
+            ],
+            'website_shipping' => [
+                'identifier' => 'website_shipping',
+                'label' => __( 'Website Shipping' ),
                 'icon' => '/images/delivery.png',
                 'selected' => false,
             ],
@@ -2390,7 +2402,10 @@ class OrdersService
             'pending' => __( 'Pending' ),
             'ongoing' => __( 'Ongoing' ),
             'ready' => __( 'Ready' ),
+            'failed' => __( 'Failed' ),
+            'canceled' => __( 'Canceled' ),
             'not-available' => __( 'Not Available' ),
+
         ];
     }
 
@@ -2816,6 +2831,7 @@ class OrdersService
             Order::PROCESSING_ONGOING,
             Order::PROCESSING_READY,
             Order::PROCESSING_FAILED,
+			Order::PROCESSING_CANCELED,
         ] ) ) {
             throw new NotAllowedException( __( 'The provided status is not supported.' ) );
         }
