@@ -39,7 +39,7 @@ jobs:
       run: vendor/bin/phpunit --config phpunit.ci.xml
       env:
         DB_CONNECTION: mysql
-        DB_HOST: 127.0.0.1
+        DB_HOST: mysql
         DB_DATABASE: nexopos_v4
         DB_USERNAME: root
         DB_PASSWORD: coolwhip
