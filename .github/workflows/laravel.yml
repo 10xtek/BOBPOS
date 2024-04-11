@@ -14,8 +14,8 @@ jobs:
       mysql:
           image: mysql:5.7
           env:
-              MYSQL_ROOT_PASSWORD: 'coolwhip'
-              MYSQL_DATABASE: nexopos_v4
+              MYSQL_ROOT_PASSWORD: 'password'
+              MYSQL_DATABASE: laravel
           ports:
               - 3306
           options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
@@ -39,16 +39,19 @@ jobs:
       run: chmod -R 777 storage bootstrap/cache
     - name: Create a delay for mysql to start
       run: sleep 30
+    - name: Run MySQL Test
+      run: mysql --user=laravel --password=password --host=mysql
+      continue-on-error: true
+    - name: Run MySQL Test
+      run: mysql --user=laravel --password=password --host=127.0.0.1
     - name: Run Migrations
       run: php artisan migrate --path=./database/migrations/core,./database/migrations/create --seed
-    - name: Run MySQL Test
-      run: mysql --user=root --password=coolwhip --host=127.0.0.1
     - name: Execute tests (Unit and Feature tests) via PHPUnit
       run: vendor/bin/phpunit --config phpunit.ci.xml
       env:
         DB_CONNECTION: mysql
         DB_HOST: mysql
-        DB_DATABASE: nexopos_v4
-        DB_USERNAME: root
-        DB_PASSWORD: coolwhip
+        DB_DATABASE: laravel
+        DB_USERNAME: laravel
+        DB_PASSWORD: password
         DB_PORT: ${{ job.services.mysql.ports['3306'] }}
