@@ -37,6 +37,7 @@ jobs:
       run: chmod -R 777 storage bootstrap/cache
     - name: Execute tests (Unit and Feature tests) via PHPUnit
       env:
-        DB_CONNECTION: sqlite
-        DB_DATABASE: database/database.sqlite
-      run: vendor/bin/phpunit --config phpunit.ci.xml
+        DB_CONNECTION: mysql
+        DB_DATABASE: nexopos_v4
+        DB_USERNAME: root
+        run: vendor/bin/phpunit --config phpunit.ci.xml
